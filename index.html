@@ -1,1547 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Puente Therapy Counseling & Resources</title>
+
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #f7f9fb;
+    color: #333;
+    line-height: 1.7;
+}
+
+header {
+    background: #2f6f73;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 42px;
+}
+
+header p {
+    font-size: 20px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.section {
+    background: white;
+    margin-bottom: 25px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+h2 {
+    color: #2f6f73;
+}
+
+.credentials {
+    background: #eef5f5;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.profile-photo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-photo img {
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.2);
+}
+.logo {
+    width: 350px;
+    max-width: 90%;
+    margin-bottom: 15px;
+}
+footer {
+    background: #2f6f73;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+ul {
+    padding-left: 25px;
+}
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    .profile-photo img {
+        width: 200px;
+    }
+}
+</style>
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>
-        Evelyn A. Knez, LCSW | Puente Therapy Counseling & Resources
-    </title>
-
-    <meta
-        name="description"
-        content="Evelyn A. Knez, LCSW provides compassionate counseling through Puente Therapy Counseling & Resources. English and Spanish services are available throughout North Carolina."
-    >
-
-    <meta name="author" content="Evelyn A. Knez, LCSW">
-    <meta name="theme-color" content="#286f72">
-
-    <link rel="canonical" href="https://puenteterapia.com/">
-
-    <link
-        rel="alternate"
-        hreflang="en"
-        href="https://puenteterapia.com/"
-    >
-
-    <link
-        rel="alternate"
-        hreflang="es"
-        href="https://puenteterapia.com/es
-
-    <style>
-        :root {
-            --primary: #286f72;
-            --primary-dark: #174f52;
-            --primary-light: #dceeed;
-            --purple: #9866cc;
-            --purple-dark: #7545a8;
-            --green: #4fcf8b;
-            --cream: #fbf8f3;
-            --white: #ffffff;
-            --text: #253238;
-            --muted: #5c6b70;
-            --border: #dce8e7;
-            --shadow: 0 18px 50px rgba(23, 79, 82, 0.12);
-            --small-shadow: 0 8px 25px rgba(23, 79, 82, 0.09);
-            --radius: 24px;
-            --max-width: 1180px;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 100px;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background:
-                radial-gradient(
-                    circle at top left,
-                    rgba(79, 207, 139, 0.1),
-                    transparent 30%
-                ),
-                radial-gradient(
-                    circle at top right,
-                    rgba(152, 102, 204, 0.1),
-                    transparent 30%
-                ),
-                #f7faf9;
-            color: var(--text);
-            line-height: 1.7;
-        }
-
-        img {
-            display: block;
-            max-width: 100%;
-        }
-
-        a {
-            color: inherit;
-        }
-
-        a:focus-visible,
-        button:focus-visible {
-            outline: 3px solid var(--green);
-            outline-offset: 4px;
-        }
-
-        .skip-link {
-            position: absolute;
-            top: -60px;
-            left: 20px;
-            padding: 12px 18px;
-            background: var(--primary-dark);
-            color: var(--white);
-            border-radius: 8px;
-            z-index: 2000;
-            text-decoration: none;
-        }
-
-        .skip-link:focus {
-            top: 20px;
-        }
-
-        /* Navigation */
-
-        .topbar {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.96);
-            border-bottom: 1px solid rgba(40, 111, 114, 0.12);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-        }
-
-        .nav-container {
-            width: min(92%, var(--max-width));
-            min-height: 76px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 24px;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            color: var(--primary-dark);
-            font-size: 1.08rem;
-            font-weight: 800;
-            text-decoration: none;
-        }
-
-        .brand-mark {
-            width: 44px;
-            height: 44px;
-            display: grid;
-            place-items: center;
-            border-radius: 50%;
-            background: linear-gradient(
-                135deg,
-                var(--green),
-                var(--purple)
-            );
-            color: var(--white);
-            font-size: 1.35rem;
-            box-shadow: var(--small-shadow);
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            gap: 5px;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-links a {
-            display: inline-flex;
-            align-items: center;
-            min-height: 44px;
-            padding: 9px 13px;
-            border-radius: 999px;
-            color: var(--text);
-            font-size: 0.94rem;
-            font-weight: 700;
-            text-decoration: none;
-            transition:
-                background-color 0.2s ease,
-                color 0.2s ease,
-                transform 0.2s ease;
-        }
-
-        .nav-links a:hover {
-            background: var(--primary-light);
-            color: var(--primary-dark);
-            transform: translateY(-1px);
-        }
-
-        .nav-links .language-link {
-            background: #f3ecfb;
-            color: var(--purple-dark);
-            border: 1px solid #ddc9f1;
-        }
-
-        .menu-button {
-            display: none;
-            min-width: 46px;
-            min-height: 46px;
-            border: 0;
-            border-radius: 12px;
-            background: var(--primary-light);
-            color: var(--primary-dark);
-            font-size: 1.4rem;
-            cursor: pointer;
-        }
-
-        /* Hero */
-
-        .hero {
-            position: relative;
-            overflow: hidden;
-            min-height: 660px;
-            display: grid;
-            align-items: center;
-            color: var(--white);
-            background:
-                linear-gradient(
-                    120deg,
-                    rgba(17, 70, 74, 0.98),
-                    rgba(40, 111, 114, 0.94) 58%,
-                    rgba(117, 69, 168, 0.88)
-                );
-        }
-
-        .hero::before {
-            content: "";
-            position: absolute;
-            width: 520px;
-            height: 520px;
-            top: -230px;
-            right: -130px;
-            border-radius: 50%;
-            border: 85px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .hero::after {
-            content: "";
-            position: absolute;
-            width: 320px;
-            height: 320px;
-            bottom: -200px;
-            left: -90px;
-            border-radius: 50%;
-            background: rgba(79, 207, 139, 0.13);
-        }
-
-        .hero-container {
-            position: relative;
-            z-index: 2;
-            width: min(92%, var(--max-width));
-            margin: 0 auto;
-            padding: 90px 0;
-            display: grid;
-            grid-template-columns: 1.18fr 0.82fr;
-            align-items: center;
-            gap: 65px;
-        }
-
-        .hero-content {
-            max-width: 700px;
-        }
-
-        .eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 9px;
-            margin-bottom: 20px;
-            padding: 9px 16px;
-            border: 1px solid rgba(255, 255, 255, 0.24);
-            border-radius: 999px;
-            background: rgba(255, 255, 255, 0.1);
-            font-size: 0.9rem;
-            font-weight: 800;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-        }
-
-        .eyebrow-dot {
-            width: 9px;
-            height: 9px;
-            border-radius: 50%;
-            background: var(--green);
-            box-shadow: 0 0 0 6px rgba(79, 207, 139, 0.14);
-        }
-
-        .hero h1 {
-            max-width: 800px;
-            margin: 0 0 22px;
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: clamp(2.75rem, 6vw, 5.4rem);
-            line-height: 1.03;
-            letter-spacing: -0.045em;
-        }
-
-        .hero h1 span {
-            color: #bff6d8;
-        }
-
-        .hero-intro {
-            max-width: 650px;
-            margin: 0 0 32px;
-            color: rgba(255, 255, 255, 0.9);
-            font-size: clamp(1.08rem, 2vw, 1.25rem);
-        }
-
-        .hero-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-            margin-bottom: 36px;
-        }
-
-        .button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 9px;
-            min-height: 52px;
-            padding: 13px 22px;
-            border: 2px solid transparent;
-            border-radius: 999px;
-            font-weight: 800;
-            text-decoration: none;
-            transition:
-                transform 0.2s ease,
-                box-shadow 0.2s ease,
-                background-color 0.2s ease;
-        }
-
-        .button:hover {
-            transform: translateY(-3px);
-        }
-
-        .button-primary {
-            background: var(--green);
-            color: #103f3b;
-            box-shadow: 0 12px 30px rgba(79, 207, 139, 0.28);
-        }
-
-        .button-primary:hover {
-            background: #72dda4;
-        }
-
-        .button-secondary {
-            border-color: rgba(255, 255, 255, 0.56);
-            background: rgba(255, 255, 255, 0.08);
-            color: var(--white);
-        }
-
-        .button-secondary:hover {
-            background: rgba(255, 255, 255, 0.16);
-        }
-
-        .hero-details {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .detail-pill {
-            padding: 8px 14px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 999px;
-            background: rgba(255, 255, 255, 0.08);
-            color: rgba(255, 255, 255, 0.94);
-            font-size: 0.9rem;
-            font-weight: 700;
-        }
-
-        .hero-visual {
-            position: relative;
-            display: grid;
-            place-items: center;
-        }
-
-        .logo-card {
-            width: min(100%, 430px);
-            padding: 32px;
-            border: 1px solid rgba(255, 255, 255, 0.28);
-            border-radius: 34px;
-            background: rgba(255, 255, 255, 0.96);
-            box-shadow: 0 30px 70px rgba(3, 31, 33, 0.35);
-            transform: rotate(1.5deg);
-        }
-
-        .logo-card img {
-            width: 100%;
-            height: auto;
-        }
-
-        .hero-note {
-            position: absolute;
-            right: -12px;
-            bottom: -28px;
-            width: 215px;
-            padding: 16px 18px;
-            border-radius: 17px;
-            background: var(--white);
-            color: var(--primary-dark);
-            box-shadow: var(--shadow);
-            font-size: 0.91rem;
-            font-weight: 800;
-            transform: rotate(-2deg);
-        }
-
-        .hero-note span {
-            display: block;
-            color: var(--purple-dark);
-            font-size: 0.8rem;
-            font-weight: 700;
-        }
-
-        /* Shared layout */
-
-        .page-section {
-            padding: 95px 0;
-        }
-
-        .page-section-soft {
-            background: linear-gradient(180deg, #f2f8f7, #ffffff);
-        }
-
-        .section-container {
-            width: min(92%, var(--max-width));
-            margin: 0 auto;
-        }
-
-        .section-heading {
-            max-width: 750px;
-            margin: 0 auto 48px;
-            text-align: center;
-        }
-
-        .section-label {
-            display: inline-block;
-            margin-bottom: 10px;
-            color: var(--purple-dark);
-            font-size: 0.84rem;
-            font-weight: 800;
-            letter-spacing: 0.11em;
-            text-transform: uppercase;
-        }
-
-        .section-heading h2 {
-            margin: 0 0 15px;
-            color: var(--primary-dark);
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: clamp(2rem, 4vw, 3.25rem);
-            line-height: 1.15;
-        }
-
-        .section-heading p {
-            margin: 0;
-            color: var(--muted);
-            font-size: 1.06rem;
-        }
-
-        /* Provider section */
-
-        .provider-card {
-            display: grid;
-            grid-template-columns: 390px 1fr;
-            gap: 54px;
-            padding: 44px;
-            border: 1px solid var(--border);
-            border-radius: 32px;
-            background: var(--white);
-            box-shadow: var(--shadow);
-        }
-
-        .provider-photo-wrap {
-            position: relative;
-            align-self: start;
-        }
-
-        .provider-photo {
-            width: 100%;
-            aspect-ratio: 4 / 5;
-            object-fit: cover;
-            object-position: center top;
-            border-radius: 25px;
-            box-shadow: var(--small-shadow);
-        }
-
-        .experience-badge {
-            position: absolute;
-            right: -18px;
-            bottom: 24px;
-            width: 125px;
-            min-height: 125px;
-            display: grid;
-            place-items: center;
-            padding: 16px;
-            border: 8px solid var(--white);
-            border-radius: 50%;
-            background: linear-gradient(
-                135deg,
-                var(--purple),
-                var(--purple-dark)
-            );
-            color: var(--white);
-            text-align: center;
-            box-shadow: var(--small-shadow);
-        }
-
-        .experience-badge strong {
-            display: block;
-            font-size: 1.65rem;
-            line-height: 1;
-        }
-
-        .experience-badge span {
-            display: block;
-            margin-top: 5px;
-            font-size: 0.72rem;
-            line-height: 1.25;
-            text-transform: uppercase;
-        }
-
-        .provider-content h2 {
-            margin: 0 0 8px;
-            color: var(--primary-dark);
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: clamp(2.1rem, 4vw, 3.25rem);
-            line-height: 1.1;
-        }
-
-        .provider-title {
-            margin: 0 0 24px;
-            color: var(--purple-dark);
-            font-size: 1.08rem;
-            font-weight: 800;
-        }
-
-        .credential-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 12px;
-            margin: 26px 0;
-        }
-
-        .credential-item {
-            padding: 16px;
-            border: 1px solid var(--border);
-            border-radius: 15px;
-            background: #f8fbfa;
-        }
-
-        .credential-item strong {
-            display: block;
-            margin-bottom: 3px;
-            color: var(--primary-dark);
-            font-size: 0.84rem;
-            text-transform: uppercase;
-        }
-
-        .provider-content p {
-            color: #435257;
-        }
-
-        /* Values */
-
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 22px;
-        }
-
-        .value-card {
-            position: relative;
-            overflow: hidden;
-            padding: 30px;
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            background: var(--white);
-            box-shadow: var(--small-shadow);
-            transition:
-                transform 0.25s ease,
-                box-shadow 0.25s ease;
-        }
-
-        .value-card:hover {
-            transform: translateY(-7px);
-            box-shadow: var(--shadow);
-        }
-
-        .value-card::after {
-            content: "";
-            position: absolute;
-            width: 90px;
-            height: 90px;
-            right: -35px;
-            bottom: -35px;
-            border-radius: 50%;
-            background: var(--primary-light);
-        }
-
-        .value-icon {
-            width: 56px;
-            height: 56px;
-            display: grid;
-            place-items: center;
-            margin-bottom: 18px;
-            border-radius: 16px;
-            background: linear-gradient(
-                135deg,
-                var(--primary-light),
-                #f0e7f9
-            );
-            color: var(--primary-dark);
-            font-size: 1.6rem;
-        }
-
-        .value-card h3 {
-            margin: 0 0 10px;
-            color: var(--primary-dark);
-            font-size: 1.25rem;
-        }
-
-        .value-card p {
-            margin: 0;
-            color: var(--muted);
-        }
-
-        /* Service cards */
-
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 24px;
-        }
-
-        .info-card {
-            padding: 32px;
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            background: var(--white);
-            box-shadow: var(--small-shadow);
-            transition:
-                transform 0.25s ease,
-                box-shadow 0.25s ease;
-        }
-
-        .info-card:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow);
-        }
-
-        .info-card.featured {
-            color: var(--white);
-            border: 0;
-            background: linear-gradient(
-                135deg,
-                var(--primary-dark),
-                var(--primary)
-            );
-        }
-
-        .info-card h3 {
-            margin: 0 0 20px;
-            color: var(--primary-dark);
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 1.75rem;
-        }
-
-        .info-card.featured h3 {
-            color: var(--white);
-        }
-
-        .clean-list {
-            display: grid;
-            gap: 11px;
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        .clean-list li {
-            position: relative;
-            padding-left: 29px;
-            color: #435257;
-        }
-
-        .clean-list li::before {
-            content: "✓";
-            position: absolute;
-            top: 1px;
-            left: 0;
-            width: 20px;
-            height: 20px;
-            display: grid;
-            place-items: center;
-            border-radius: 50%;
-            background: var(--primary-light);
-            color: var(--primary-dark);
-            font-size: 0.75rem;
-            font-weight: 900;
-        }
-
-        .featured .clean-list li {
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .featured .clean-list li::before {
-            background: var(--green);
-            color: var(--primary-dark);
-        }
-
-        /* Callout */
-
-        .mission-box {
-            position: relative;
-            overflow: hidden;
-            padding: 55px;
-            border-radius: 34px;
-            color: var(--white);
-            background:
-                linear-gradient(
-                    125deg,
-                    var(--purple-dark),
-                    var(--purple) 55%,
-                    var(--primary)
-                );
-            box-shadow: var(--shadow);
-        }
-
-        .mission-box::after {
-            content: "";
-            position: absolute;
-            width: 260px;
-            height: 260px;
-            top: -130px;
-            right: -70px;
-            border: 55px solid rgba(255, 255, 255, 0.11);
-            border-radius: 50%;
-        }
-
-        .mission-box-content {
-            position: relative;
-            z-index: 2;
-            max-width: 850px;
-        }
-
-        .mission-box h2 {
-            margin: 0 0 16px;
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: clamp(2rem, 4vw, 3.1rem);
-            line-height: 1.18;
-        }
-
-        .mission-box p {
-            margin: 0;
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.1rem;
-        }
-
-        /* Contact */
-
-        .contact-layout {
-            display: grid;
-            grid-template-columns: 0.85fr 1.15fr;
-            gap: 26px;
-        }
-
-        .contact-intro,
-        .contact-card {
-            padding: 40px;
-            border-radius: 28px;
-        }
-
-        .contact-intro {
-            color: var(--white);
-            background: linear-gradient(
-                145deg,
-                var(--primary-dark),
-                var(--primary)
-            );
-            box-shadow: var(--shadow);
-        }
-
-        .contact-intro h2 {
-            margin: 0 0 15px;
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: clamp(2rem, 4vw, 3rem);
-            line-height: 1.15;
-        }
-
-        .contact-intro p {
-            color: rgba(255, 255, 255, 0.88);
-        }
-
-        .contact-card {
-            border: 1px solid var(--border);
-            background: var(--white);
-            box-shadow: var(--small-shadow);
-        }
-
-        .contact-card h3 {
-            margin: 0 0 20px;
-            color: var(--primary-dark);
-            font-size: 1.5rem;
-        }
-
-        .contact-row {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            padding: 17px 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .contact-row:last-child {
-            border-bottom: 0;
-        }
-
-        .contact-icon {
-            flex: 0 0 43px;
-            width: 43px;
-            height: 43px;
-            display: grid;
-            place-items: center;
-            border-radius: 13px;
-            background: var(--primary-light);
-            color: var(--primary-dark);
-            font-size: 1.2rem;
-        }
-
-        .contact-row strong {
-            display: block;
-            color: var(--primary-dark);
-        }
-
-        .contact-row p {
-            margin: 2px 0 0;
-            color: var(--muted);
-        }
-
-        .contact-row a {
-            color: var(--purple-dark);
-            font-weight: 800;
-            overflow-wrap: anywhere;
-        }
-
-        /* Footer */
-
-        footer {
-            padding: 38px 20px;
-            background: #103e41;
-            color: rgba(255, 255, 255, 0.85);
-            text-align: center;
-        }
-
-        .footer-content {
-            width: min(92%, var(--max-width));
-            margin: 0 auto;
-        }
-
-        .footer-content strong {
-            color: var(--white);
-        }
-
-        .footer-links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 18px;
-            margin: 14px 0;
-        }
-
-        .footer-links a {
-            color: #c8f2da;
-            font-weight: 700;
-            text-decoration: none;
-        }
-
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
-
-        .footer-note {
-            margin: 12px 0 0;
-            font-size: 0.82rem;
-            color: rgba(255, 255, 255, 0.67);
-        }
-
-        /* Responsive design */
-
-        @media (max-width: 980px) {
-            .hero-container {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .hero-content {
-                margin: 0 auto;
-            }
-
-            .hero-intro {
-                margin-right: auto;
-                margin-left: auto;
-            }
-
-            .hero-actions,
-            .hero-details {
-                justify-content: center;
-            }
-
-            .hero-visual {
-                width: min(100%, 500px);
-                margin: 15px auto 0;
-            }
-
-            .provider-card {
-                grid-template-columns: 320px 1fr;
-                gap: 36px;
-            }
-
-            .values-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 820px) {
-            .menu-button {
-                display: grid;
-                place-items: center;
-            }
-
-            .nav-links {
-                position: absolute;
-                top: 76px;
-                right: 4%;
-                left: 4%;
-                display: none;
-                padding: 15px;
-                border: 1px solid var(--border);
-                border-radius: 17px;
-                background: var(--white);
-                box-shadow: var(--shadow);
-            }
-
-            .nav-links.open {
-                display: grid;
-            }
-
-            .nav-links a {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .provider-card {
-                grid-template-columns: 1fr;
-                padding: 30px;
-            }
-
-            .provider-photo-wrap {
-                width: min(100%, 390px);
-                margin: 0 auto;
-            }
-
-            .cards-grid,
-            .contact-layout {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 600px) {
-            html {
-                scroll-padding-top: 85px;
-            }
-
-            .brand {
-                font-size: 0.9rem;
-            }
-
-            .brand-mark {
-                width: 39px;
-                height: 39px;
-            }
-
-            .hero {
-                min-height: auto;
-            }
-
-            .hero-container {
-                padding: 72px 0 95px;
-                gap: 48px;
-            }
-
-            .hero h1 {
-                font-size: 2.7rem;
-            }
-
-            .hero-actions {
-                display: grid;
-            }
-
-            .button {
-                width: 100%;
-            }
-
-            .logo-card {
-                padding: 20px;
-                border-radius: 24px;
-            }
-
-            .hero-note {
-                right: 10px;
-                bottom: -45px;
-                width: 190px;
-            }
-
-            .page-section {
-                padding: 70px 0;
-            }
-
-            .provider-card,
-            .info-card,
-            .contact-intro,
-            .contact-card {
-                padding: 25px;
-            }
-
-            .credential-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .experience-badge {
-                right: -5px;
-                width: 108px;
-                min-height: 108px;
-                border-width: 6px;
-            }
-
-            .mission-box {
-                padding: 36px 27px;
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            html {
-                scroll-behavior: auto;
-            }
-
-            *,
-            *::before,
-            *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-    </style>
 </head>
 
 <body>
-    #main-content
-        Skip to main content
+
+<header>
+    <img src="Final01.jpg" alt="Puente Therapy Counseling & Resources Logo" class="logo">
+
+    <p>Building Bridges to Healing, Growth, and Wellness</p>
+</header>
+
+
+<div class="container">
+
+<div class="section">
+
+    <h2>Evelyn A. Knez, LCSW</h2>
+<div style="display:flex;gap:40px;align-items:flex-start;flex-wrap:wrap;">
+
+    <div class="profile-photo">
+        <img src="e357d0b1-775f-4f80-8ffa-5be2a12bea40.png"
+    </div>
+
+    <div style="flex:1;min-width:300px;">
+
+        <h3>Professional Credentials</h3>
+
+        <p>
+            <strong>Licensed Clinical Social Worker (LCSW)</strong><br>
+            Master of Social Work (MSW)<br>
+            Grand Valley State University, Michigan
+        </p>
+
+        <p>
+            <strong>Clinical Licensure:</strong> North Carolina<br>
+            <strong>Years of Clinical Practice:</strong> 14+ Years<br>
+            <strong>Languages:</strong> English and Spanish
+        </p>
+
+    </div>
+
+
+    <p>
+        I am a clinical therapist with a Master's degree in Social Work and more than 14 years of experience providing mental health services. Throughout my career, I have had the opportunity to work with children, adolescents, adults, and families from diverse backgrounds and with a wide range of behavioral and emotional concerns.
+    </p>
+
+    <p>
+        I am passionate about helping individuals overcome behavioral and emotional challenges that may interfere with their ability to reach their goals and experience a more balanced and fulfilling life. I believe that therapy is a collaborative process and that each person brings unique experiences, strengths, and circumstances to the therapeutic relationship.
+    </p>
+
+</div>
+
+<div class="section">
+
+    <h2>What You Can Expect From Services</h2>
+
+    <p>
+        Clients can expect a welcoming, respectful, and supportive environment where diversity and individual differences are valued and embraced.
+    </p>
+
+    <p>
+        Services are provided using a holistic, client-centered approach that considers each person's unique needs, strengths, background, environment, and potential barriers to treatment.
+    </p>
+
+    <p>
+        My goal is to work collaboratively with each client to identify meaningful goals, develop practical coping and problem-solving strategies, and support positive and sustainable changes.
+    </p>
+
+</div>
+
+<div class="section">
+
+    <h2>About Puente</h2>
+
+    <p>
+        Puente is a behavioral health agency that provides clinical counseling services in mental health and substance use to individuals, children, and families.
+    </p>
+
+    <p>
+        The agency serves clients from diverse backgrounds and across the lifespan. Our bilingual staff provide culturally responsive services to members of the Hispanic community in their preferred language.
+    </p>
+
+</div>
+
+<div class="section">
+
+    <h2>Our Mission</h2>
+
+    <p>
+        Our mission is to help bridge gaps in mental health care by providing accessible, compassionate, and individualized services through a systemic therapeutic approach.
+    </p>
+
+</div>
+
+<div class="section">
+
+    <h2>Services</h2>
+
+    <ul>
+        <li>Individual Therapy</li>
+        <li>Child and Adolescent Counseling</li>
+        <li>Family Therapy</li>
+        <li>Substance Use Counseling</li>
+        <li>Mental Health Counseling</li>
+        <li>Bilingual Services (English & Spanish)</li>
+    </ul>
+
+</div>
+
+<div class="section">
+
+    <h2>Specialties</h2>
+
+    <ul>
+        <li>Anger Management</li>
+        <li>Anxiety</li>
+        <li>Attachment Issues</li>
+        <li>Attention Deficit (ADHD)</li>
+        <li>Depression</li>
+        <li>Grief & Loss</li>
+        <li>Mood Disorders</li>
+        <li>Self Esteem</li>
+        <li>Stress Management</li>
+        <li>Substance Use</li>
+    </ul>
+
+</div>
+
+<div class="section">
+
+    <h2>Types of Therapy</h2>
+
+    <ul>
+        <li>Cognitive Behavioral Therapy (CBT)</li>
+        <li>Dialectical Behavioral Therapy (DBT)</li>
+        <li>Family Systems Therapy</li>
+        <li>Mindfulness</li>
+        <li>Mindfulness-Based Cognitive Therapy (MBCT)</li>
+        <li>Motivational Interviewing</li>
+        <li>Narrative Therapy</li>
+        <li>Person-Centered/Rogerian Therapy</li>
+        <li>Play Therapy</li>
+        <li>Trauma-Focused Cognitive Behavioral Therapy</li>
+    </ul>
+
+</div>
+
+<div class="section">
+
+    <h2>Age Specialties</h2>
+
+    <ul>
+        <li>Toddlers / Preschoolers (0-5)</li>
+        <li>Children (6-10)</li>
+        <li>Preteens / Tweens (11-13)</li>
+        <li>Adolescents / Teenagers (14-19)</li>
+        <li>Adults (20-64)</li>
+        <li>Elders (65+)</li>
+    </ul>
+
+</div>
+
+<div class="section">
+
+    <h2>Communities Served</h2>
+
+    <ul>
+        <li>Individuals</li>
+        <li>Couples</li>
+        <li>Families</li>
+        <li>Telehealth Services</li>
+    </ul>
+
+</div>
+
+<div class="section">
+
+    <h2>Contact Us</h2>
+
+<p>
+    Email:
+    <a href="mailto:info@santanapllc.hush.com">
+        info@santanapllc.hush.com
     </a>
+</p>
 
-    <nav class="topbar" aria-label="Main navigation">
-        <div class="nav-container">
-            #home
-                <span class="brand-mark" aria-hidden="true">P</span>
-                <span>Puente Therapy</span>
-            </a>
+    <p>Serving Individuals, Children, and Families Throughout North Carolina.</p>
 
-            <button
-                class="menu-button"
-                id="menuButton"
-                type="button"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
-                aria-controls="navigationLinks"
-            >
-                ☰
-            </button>
+    <p>English and Spanish Services Available.</p>
 
-            <ul class="nav-links" id="navigationLinks">
-                <li>#aboutAbout</a></li>
-                <li>#servicesServices</a></li>
-                <li>#specialtiesSpecialties</a></li>
-                <li>#contactContact</a></li>
-                <li>
-                    es.html
-                        Español
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+</div>
 
-    <header class="hero" id="home">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="eyebrow">
-                    <span class="eyebrow-dot" aria-hidden="true"></span>
-                    English and Spanish services
-                </div>
+</div>
 
-                <h1>
-                    Building bridges to
-                    <span>healing and growth.</span>
-                </h1>
+<footer>
+    © 2026 Puente Therapy Counseling & Resources
+</footer>
 
-                <p class="hero-intro">
-                    Compassionate, individualized counseling for children,
-                    adolescents, adults, and families throughout North Carolina.
-                </p>
-
-                <div class="hero-actions">
-                    <a
-                        class="button button-primary"
-                        href="mailto:info@santanapllc.hush.com"
-                    >
-                        ✉ Contact Puente
-                    </a>
-
-                    <a
-                        class="buttone Services
-                    </a>
-                </div>
-
-                <div class="hero-details" aria-label="Practice highlights">
-                    <span class="detail-pill">14+ years of practice</span>
-                    <span class="detail-pill">North Carolina licensed</span>
-                    <span class="detail-pill">Telehealth available</span>
-                </div>
-            </div>
-
-            <div class="hero-visual">
-                <div class="logo-card">
-                    <img
-                        src="Final01.          <div class="hero-note">
-                    Evelyn A. Knez, LCSW
-                    <span>Licensed Clinical Social Worker</span>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <main id="main-content">
-        <section class="page-section" id="about">
-            <div class="section-container">
-                <div class="provider-card">
-                    <div class="provider-photo-wrap">
-                        <img
-                            class="provider-photo"
-                            src="e357d0b1-775f-4f80-8ffa-5be2a12bea40.png"
-                            alt <strong>14+</strong>
-                                <span>Years of clinical practice</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="provider-content">
-                        <span class="section-label">Meet the provider</span>
-
-                        <h2>Evelyn A. Knez, LCSW</h2>
-
-                        <p class="provider-title">
-                            Licensed Clinical Social Worker
-                        </p>
-
-                        <div class="credential-grid">
-                            <div class="credential-item">
-                                <strong>Education</strong>
-                                Master of Social Work
-                            </div>
-
-                            <div class="credential-item">
-                                <strong>University</strong>
-                                Grand Valley State University
-                            </div>
-
-                            <div class="credential-item">
-                                <strong>Licensure</strong>
-                                North Carolina
-                            </div>
-
-                            <div class="credential-item">
-                                <strong>Languages</strong>
-                                English and Spanish
-                            </div>
-                        </div>
-
-                        <p>
-                            I am a clinical therapist with a master's degree
-                            in Social Work and more than 14 years of experience
-                            providing mental health services. Throughout my
-                            career, I have worked with children, adolescents,
-                            adults, and families from diverse backgrounds and
-                            with a wide range of behavioral and emotional
-                            concerns.
-                        </p>
-
-                        <p>
-                            I am passionate about helping individuals overcome
-                            challenges that may interfere with their ability
-                            to reach their goals and experience a more balanced
-                            and fulfilling life. Therapy is a collaborative
-                            process, and each person brings unique experiences,
-                            strengths, and circumstances to the therapeutic
-                            relationship.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="page-section page-section-soft">
-            <div class="section-container">
-                <div class="section-heading">
-                    <span class="section-label">What to expect</span>
-
-                    <h2>
-                        A supportive path forward, centered around the client.
-                    </h2>
-
-                    <p>
-                        Services are designed to provide a welcoming,
-                        respectful, and collaborative environment.
-                    </p>
-                </div>
-
-                <div class="values-grid">
-                    <article class="value-card">
-                        <div class="value-icon" aria-hidden="true">♡</div>
-
-                        <h3>Welcoming Environment</h3>
-
-                        <p>
-                            A respectful and supportive setting where diversity
-                            and individual differences are valued.
-                        </p>
-                    </article>
-
-                    <article class="value-card">
-                        <div class="value-icon" aria-hidden="true">◎</div>
-
-                        <h3>Individualized Care</h3>
-
-                        <p>
-                            A holistic, client-centered approach that considers
-                            individual needs, strengths, and experiences.
-                        </p>
-                    </article>
-
-                    <article class="value-card">
-                        <div class="value-icon" aria-hidden="true">↗</div>
-
-                        <h3>Meaningful Progress</h3>
-
-                        <p>
-                            Collaborative goal setting, practical coping tools,
-                            and support for positive and sustainable changes.
-                        </p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="page-section">
-            <div class="section-container">
-                <div class="mission-box">
-                    <div class="mission-box-content">
-                        <span class="section-label" style="color:#c9f6dc;">
-                            About Puente
-                        </span>
-
-                        <h2>
-                            Helping bridge gaps in mental health care.
-                        </h2>
-
-                        <p>
-                            Puente is a behavioral health agency providing
-                            clinical counseling services in mental health and
-                            substance use to individuals, children, and
-                            families. Puente provides accessible,
-                            compassionate, culturally responsive, and
-                            individualized services, including support in
-                            English and Spanish.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section
-            class="page-section page-section-soft"
-            id="services"
-        >
-            <div class="section-container">
-                <div class="section-heading">
-                    <span class="section-label">Services and support</span>
-
-                    <h2>Care for different stages of life.</h2>
-
-                    <p>
-                        Explore the services, specialties, therapy approaches,
-                        age groups, and communities supported by Puente.
-                    </p>
-                </div>
-
-                <div class="cards-grid">
-                    <article class="info-card featured">
-                        <h3>Services</h3>
-
-                        <ul class="clean-list">
-                            <li>Individual Therapy</li>
-                            <li>Child and Adolescent Counseling</li>
-                            <li>Family Therapy</li>
-                            <li>Substance Use Counseling</li>
-                            <li>Mental Health Counseling</li>
-                            <li>Bilingual Services in English and Spanish</li>
-                        </ul>
-                    </article>
-
-                    <article class="info-card" id="specialties">
-                        <h3>Specialties</h3>
-
-                        <ul class="clean-list">
-                            <li>Anger Management</li>
-                            <li>Anxiety</li>
-                            <li>Attachment Issues</li>
-                            <li>Attention Deficit and ADHD</li>
-                            <li>Depression</li>
-                            <li>Grief and Loss</li>
-                            <li>Mood Disorders</li>
-                            <li>Self-Esteem</li>
-                            <li>Stress Management</li>
-                            <li>Substance Use</li>
-                        </ul>
-                    </article>
-
-                    <article class="info-card">
-                        <h3>Types of Therapy</h3>
-
-                        <ul class="clean-list">
-                            <li>Cognitive Behavioral Therapy</li>
-                            <li>Dialectical Behavioral Therapy</li>
-                            <li>Family Systems Therapy</li>
-                            <li>Mindfulness</li>
-                            <li>Mindfulness-Based Cognitive Therapy</li>
-                            <li>Motivational Interviewing</li>
-                            <li>Narrative Therapy</li>
-                            <li>Person-Centered Therapy</li>
-                            <li>Play Therapy</li>
-                            <li>Trauma-Focused Cognitive Behavioral Therapy</li>
-                        </ul>
-                    </article>
-
-                    <article class="info-card">
-                        <h3>Age Specialties</h3>
-
-                        <ul class="clean-list">
-                            <li>Toddlers and Preschoolers, ages 0-5</li>
-                            <li>Children, ages 6-10</li>
-                            <li>Preteens and Tweens, ages 11-13</li>
-                            <li>Adolescents and Teenagers, ages 14-19</li>
-                            <li>Adults, ages 20-64</li>
-                            <li>Older Adults, ages 65+</li>
-                        </ul>
-                    </article>
-
-                    <article class="info-card">
-                        <h3>Communities Served</h3>
-
-                        <ul class="clean-list">
-                            <li>Individuals</li>
-                            <li>Couples</li>
-                            <li>Families</li>
-                            <li>English-speaking clients</li>
-                            <li>Spanish-speaking clients</li>
-                            <li>Telehealth clients</li>
-                        </ul>
-                    </article>
-
-                    <article class="info-card featured">
-                        <h3>Our Mission</h3>
-
-                        <p style="color:rgba(255,255,255,.9); margin:0;">
-                            Our mission is to help bridge gaps in mental health
-                            care by providing accessible, compassionate, and
-                            individualized services through a systemic
-                            therapeutic approach.
-                        </p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="page-section" id="contact">
-            <div class="section-container">
-                <div class="contact-layout">
-                    <div class="contact-intro">
-                        <span
-                            class="section-label"
-                            style="color:#c9f6dc;"
-                        >
-                            Take the next step
-                        </span>
-
-                        <h2>Connect with Puente Therapy.</h2>
-
-                        <p>
-                            Contact Puente Therapy to ask about services and
-                            availability. English and Spanish services are
-                            available.
-                        </p>
-
-                        <a
-                            class="button button-primary"
-                            href="mailto:info@santanapllc.hush.com"
-                        >
-                            Send an Email
-                        </a>
-                    </div>
-
-                    <div class="contact-card">
-                        <h3>Contact Information</h3>
-
-                        <div class="contact-row">
-                            <div class="contact-icon" aria-hidden="true">
-                                ✉
-                            </div>
-
-                            <div>
-                                <strong>Email</strong>
-
-                                <p>
-                                    <a
-                                        href="mailto:info@santanapllc.hush.com"
-                                    >
-                                        info@santanapllc.hush.com
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="contact-row">
-                            <div class="contact-icon" aria-hidden="true">
-                                ◉
-                            </div>
-
-                            <div>
-                                <strong>Service Area</strong>
-
-                                <p>
-                                    Individuals, children, and families
-                                    throughout North Carolina
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="contact-row">
-                            <div class="contact-icon" aria-hidden="true">
-                                文
-                            </div>
-
-                            <div>
-                                <strong>Languages</strong>
-
-                                <p>English and Spanish</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-row">
-                            <div class="contact-icon" aria-hidden="true">
-                                ▣
-                            </div>
-
-                            <div>
-                                <strong>Service Format</strong>
-
-                                <p>Telehealth services available</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <strong>Puente Therapy Counseling & Resources</strong>
-
-            <div class="footer-links">
-                #aboutAbout</a>
-                #servicesServices</a>
-                #specialtiesSpecialties</a>
-                #contactContact</a>
-                es.htmlEspañol</a>
-            </div>
-
-            <div>
-                © 2026 Puente Therapy Counseling & Resources
-            </div>
-
-            <p class="footer-note">
-                This website provides general information about services and
-                is not intended for emergency communication.
-            </p>
-        </div>
-    </footer>
-
-    <script>
-        const menuButton = document.getElementById("menuButton");
-        const navigationLinks =
-            document.getElementById("navigationLinks");
-
-        menuButton.addEventListener("click", function () {
-            const isOpen =
-                navigationLinks.classList.toggle("open");
-
-            menuButton.setAttribute("aria-expanded", isOpen);
-
-            menuButton.setAttribute(
-                "aria-label",
-                isOpen
-                    ? "Close navigation menu"
-                    : "Open navigation menu"
-            );
-
-            menuButton.textContent = isOpen ? "×" : "☰";
-        });
-
-        navigationLinks.querySelectorAll("a").forEach(function (link) {
-            link.addEventListener("click", function () {
-                navigationLinks.classList.remove("open");
-                menuButton.setAttribute("aria-expanded", "false");
-                menuButton.setAttribute(
-                    "aria-label",
-                    "Open navigation menu"
-                );
-                menuButton.textContent = "☰";
-            });
-        });
-    </script>
 </body>
 </html>
