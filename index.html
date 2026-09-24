@@ -1,434 +1,736 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Puente Therapy Counseling & Resources</title>
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Puente Therapy Counseling &amp; Resources</title>
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XG2VDBCTD6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-XG2VDBCTD6');
+<script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-XG2VDBCTD6">
+</script>
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag("js", new Date());
+    gtag("config", "G-XG2VDBCTD6");
 </script>
 
 <style>
 
-body{
-    font-family:"Segoe UI", Arial, Helvetica, sans-serif;
-    margin:0;
-    background:#f5f7f6;
-    color:#333;
-    line-height:1.8;
+body {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: #f5f7f6;
+    color: #333;
+    line-height: 1.8;
 }
 
 /* HEADER */
 
-header{
-    background:linear-gradient(
-        135deg,
-        #2f6f73 0%,
-        #4d8c86 100%
-    );
-    color:white;
-    text-align:center;
-    padding:80px 20px;
-    border-bottom-left-radius:40px;
-    border-bottom-right-radius:40px;
-    box-shadow:0 8px 25px rgba(0,0,0,.12);
+header {
+    background:
+        linear-gradient(
+            135deg,
+            #2f6f73 0%,
+            #4d8c86 100%
+        );
+
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
-  
-.logo{
-    width:280px;
-    max-width:90%;
-    display:block;
-    margin:0 auto 20px auto;
+.logo {
+    width: 280px;
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
 }
 
-header p{
-    font-size:24px;
-    font-weight:300;
-    margin:0;
+header p {
+    font-size: 24px;
+    font-weight: 300;
+    margin: 0;
+}
+
+/* NAVIGATION */
+
+.navbar {
+    background: white;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar a {
+    display: inline-block;
+    margin: 0 25px;
+    color: #2f6f73;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a:hover {
+    color: #b58ce7;
 }
 
 /* MAIN LAYOUT */
 
-.container{
-    width:92%;
-    max-width:1200px;
-    margin:auto;
-    padding:50px 0;
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 0;
 }
 
 /* CONTENT CARDS */
 
-.section{
-    background:white;
-    margin-bottom:30px;
-    padding:40px;
-    border-radius:24px;
+.section {
+    background: white;
+    margin-bottom: 30px;
+    padding: 40px;
+    border-radius: 24px;
+
     box-shadow:
-        0 10px 30px rgba(0,0,0,.06);
-    transition:all .3s ease;
+        0 10px 30px rgba(0, 0, 0, 0.06);
+
+    transition: all 0.3s ease;
 }
 
-.section:hover{
-    transform:translateY(-3px);
+.section:hover {
+    transform: translateY(-3px);
 }
 
 /* HEADINGS */
 
-h2{
-    color:#b58ce7;
-    margin-top:0;
-    margin-bottom:20px;
-    padding-left:15px;
-    border-left:6px solid #5be58b;
-    font-size:30px;
+h2 {
+    color: #b58ce7;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border-left: 6px solid #5be58b;
+    font-size: 30px;
 }
 
-h3{
-    color:#2f6f73;
-    margin-top:0;
+h3 {
+    color: #2f6f73;
+    margin-top: 0;
 }
 
 /* PROFILE */
 
-.profile-photo{
-    text-align:center;
+.profile-photo {
+    text-align: center;
 }
 
-.profile-photo img{
-    width:320px;
-    max-width:100%;
-    border-radius:24px;
-    border:5px solid white;
+.profile-photo img {
+    width: 320px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 24px;
+    border: 5px solid white;
+
     box-shadow:
-        0 15px 35px rgba(0,0,0,.18);
+        0 15px 35px rgba(0, 0, 0, 0.18);
 }
 
 /* CREDENTIAL BOX */
 
-.credentials{
-    background:#eef8f4;
-    padding:25px;
-    border-radius:16px;
+.credentials {
+    background: #eef8f4;
+    padding: 25px;
+    border-radius: 16px;
 }
 
 /* TEXT */
 
-p{
-    font-size:17px;
+p {
+    font-size: 17px;
 }
 
-strong{
-    color:#2f6f73;
+strong {
+    color: #2f6f73;
 }
 
 /* LISTS */
 
-ul{
-    list-style:none;
-    padding-left:0;
+ul {
+    list-style: none;
+    padding-left: 0;
 }
 
-ul li{
-    padding:10px 0;
-    border-bottom:1px solid #ececec;
+ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ececec;
 }
 
-ul li:last-child{
-    border-bottom:none;
+ul li:last-child {
+    border-bottom: none;
 }
 
 /* LINKS */
 
-a{
-    color:#2f6f73;
-    text-decoration:none;
-    font-weight:600;
+a {
+    color: #2f6f73;
+    text-decoration: none;
+    font-weight: 600;
 }
 
-a:hover{
-    color:#b58ce7;
+a:hover {
+    color: #b58ce7;
 }
 
 /* FOOTER */
 
-footer{
-    background:linear-gradient(
-        135deg,
-        #2f6f73 0%,
-        #4d8c86 100%
-    );
-    color:white;
-    text-align:center;
-    padding:30px;
-    margin-top:30px;
+footer {
+    background:
+        linear-gradient(
+            135deg,
+            #2f6f73 0%,
+            #4d8c86 100%
+        );
+
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 30px;
 }
 
 /* MOBILE */
 
-@media (max-width:768px){
+@media (max-width: 768px) {
 
-    header{
-        padding:50px 20px;
+    header {
+        padding: 50px 20px;
     }
 
-    .logo{
-        width:220px;
+    .logo {
+        width: 220px;
     }
 
-    h2{
-        font-size:24px;
+    h2 {
+        font-size: 24px;
     }
 
-    .section{
-        padding:25px;
+    .section {
+        padding: 25px;
     }
 
-    .profile-photo img{
-        width:240px;
+    .profile-photo img {
+        width: 240px;
+    }
+
+    .navbar a {
+        display: inline-block;
+        margin: 5px 12px;
     }
 }
-.navbar{
-    background:white;
-    text-align:center;
-    padding:15px;
-    border-bottom:1px solid #ddd;
-}
 
-.navbar a{
-    margin:0 25px;
-    color:#2f6f73;
-    text-decoration:none;
-    font-weight:600;
-}
-
-.navbar a:hover{
-    color:#b58ce7;
-}
 </style>
 
 </head>
 
 <body id="top">
 
+<!-- HEADER -->
+
 <header>
-    <img src="Final01.jpg" alt="Puente Therapy Counseling & Resources Logo" class="logo">
 
-    <p>Building Bridges to Healing, Growth, and Wellness</p>
-  
+    Final01.jpg
+
+    <p>
+        Building Bridges to Healing, Growth, and Wellness
+    </p>
+
 </header>
-<nav class="navbar">
 
-    <a href="#top">Home</a>
+<!-- NAVIGATION -->
 
-    <a href="#about">About</a>
+<nav
+    class="navbar"
+    aria-label="Main navigation"
+>
 
-    #servicesServices</a>
+    <a href="#top">
+        Home
+    </a>
 
-    <aontactContact</a>
+    <a href="#about">
+        About
+    </a>
+
+    #services
+        Services
+    </a>
+
+    #contact
+        Contact
+    </a>
 
 </nav>
 
+<!-- MAIN CONTENT -->
 
 <div class="container">
 
-<div class="section">
+    <!-- PROVIDER -->
 
-    <h2>Evelyn A. Knez, LCSW</h2>
-<div style="display:flex;gap:40px;align-items:flex-start;flex-wrap:wrap;">
+    <div class="section">
 
-<div class="profile-photo">
-    <img src="e357d0b1-775f-4f80-8ffa-5be2a12bea40.png" alt="Evelyn A. Knez, LCSW">
+        <h2>
+            Evelyn A. Knez, LCSW
+        </h2>
+
+        <div
+            style="
+                display: flex;
+                gap: 40px;
+                align-items: flex-start;
+                flex-wrap: wrap;
+            "
+        >
+
+            <div class="profile-photo">
+
+                e357d0b1-775f-4f80-8ffa-5be2a12bea40.png
+
+            </div>
+
+            <div
+                style="
+                    flex: 1;
+                    min-width: 300px;
+                "
+            >
+
+                <div class="credentials">
+
+                    <h3>
+                        Professional Credentials
+                    </h3>
+
+                    <p>
+
+                        <strong>
+                            Licensed Clinical Social Worker (LCSW)
+                        </strong>
+
+                        <br>
+
+                        Master of Social Work (MSW)
+
+                        <br>
+
+                        Grand Valley State University, Michigan
+
+                    </p>
+
+                    <p>
+
+                        <strong>
+                            Clinical Licensure:
+                        </strong>
+
+                        North Carolina
+
+                        <br>
+
+                        <strong>
+                            Years of Clinical Practice:
+                        </strong>
+
+                        14+ Years
+
+                        <br>
+
+                        <strong>
+                            Languages:
+                        </strong>
+
+                        English and Spanish
+
+                    </p>
+
+                </div>
+
+                <p>
+                    I am a clinical therapist with a Master's degree
+                    in Social Work and more than 14 years of experience
+                    providing mental health services. Throughout my
+                    career, I have had the opportunity to work with
+                    children, adolescents, adults, and families from
+                    diverse backgrounds and with a wide range of
+                    behavioral and emotional concerns.
+                </p>
+
+                <p>
+                    I am passionate about helping individuals overcome
+                    behavioral and emotional challenges that may
+                    interfere with their ability to reach their goals
+                    and experience a more balanced and fulfilling life.
+                    I believe that therapy is a collaborative process
+                    and that each person brings unique experiences,
+                    strengths, and circumstances to the therapeutic
+                    relationship.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- WHAT TO EXPECT -->
+
+    <div class="section">
+
+        <h2>
+            What You Can Expect From Services
+        </h2>
+
+        <p>
+            Clients can expect a welcoming, respectful, and supportive
+            environment where diversity and individual differences are
+            valued and embraced.
+        </p>
+
+        <p>
+            Services are provided using a holistic, client-centered
+            approach that considers each person's unique needs,
+            strengths, background, environment, and potential barriers
+            to treatment.
+        </p>
+
+        <p>
+            My goal is to work collaboratively with each client to
+            identify meaningful goals, develop practical coping and
+            problem-solving strategies, and support positive and
+            sustainable changes.
+        </p>
+
+    </div>
+
+    <!-- ABOUT -->
+
+    <div
+        class="section"
+        id="about"
+    >
+
+        <h2>
+            About Puente
+        </h2>
+
+        <p>
+            Puente is a behavioral health agency that provides clinical
+            counseling services in mental health and substance use to
+            individuals, children, and families.
+        </p>
+
+        <p>
+            The agency serves clients from diverse backgrounds and
+            across the lifespan. Our bilingual staff provide culturally
+            responsive services to members of the Hispanic community in
+            their preferred language.
+        </p>
+
+    </div>
+
+    <!-- MISSION -->
+
+    <div class="section">
+
+        <h2>
+            Our Mission
+        </h2>
+
+        <p>
+            Our mission is to help bridge gaps in mental health care by
+            providing accessible, compassionate, and individualized
+            services through a systemic therapeutic approach.
+        </p>
+
+    </div>
+
+    <!-- SERVICES -->
+
+    <div
+        class="section"
+        id="services"
+    >
+
+        <h2>
+            Services
+        </h2>
+
+        <ul>
+
+            <li>
+                Individual Therapy
+            </li>
+
+            <li>
+                Child and Adolescent Counseling
+            </li>
+
+            <li>
+                Family Therapy
+            </li>
+
+            <li>
+                Substance Use Counseling
+            </li>
+
+            <li>
+                Mental Health Counseling
+            </li>
+
+            <li>
+                Bilingual Services (English &amp; Spanish)
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- SPECIALTIES -->
+
+    <div class="section">
+
+        <h2>
+            Specialties
+        </h2>
+
+        <ul>
+
+            <li>
+                Anger Management
+            </li>
+
+            <li>
+                Anxiety
+            </li>
+
+            <li>
+                Attachment Issues
+            </li>
+
+            <li>
+                Attention Deficit (ADHD)
+            </li>
+
+            <li>
+                Depression
+            </li>
+
+            <li>
+                Grief &amp; Loss
+            </li>
+
+            <li>
+                Mood Disorders
+            </li>
+
+            <li>
+                Self Esteem
+            </li>
+
+            <li>
+                Stress Management
+            </li>
+
+            <li>
+                Substance Use
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- TYPES OF THERAPY -->
+
+    <div class="section">
+
+        <h2>
+            Types of Therapy
+        </h2>
+
+        <ul>
+
+            <li>
+                Cognitive Behavioral Therapy (CBT)
+            </li>
+
+            <li>
+                Dialectical Behavioral Therapy (DBT)
+            </li>
+
+            <li>
+                Family Systems Therapy
+            </li>
+
+            <li>
+                Mindfulness
+            </li>
+
+            <li>
+                Mindfulness-Based Cognitive Therapy (MBCT)
+            </li>
+
+            <li>
+                Motivational Interviewing
+            </li>
+
+            <li>
+                Narrative Therapy
+            </li>
+
+            <li>
+                Person-Centered/Rogerian Therapy
+            </li>
+
+            <li>
+                Play Therapy
+            </li>
+
+            <li>
+                Trauma-Focused Cognitive Behavioral Therapy
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- AGE SPECIALTIES -->
+
+    <div class="section">
+
+        <h2>
+            Age Specialties
+        </h2>
+
+        <ul>
+
+            <li>
+                Toddlers / Preschoolers (0-5)
+            </li>
+
+            <li>
+                Children (6-10)
+            </li>
+
+            <li>
+                Preteens / Tweens (11-13)
+            </li>
+
+            <li>
+                Adolescents / Teenagers (14-19)
+            </li>
+
+            <li>
+                Adults (20-64)
+            </li>
+
+            <li>
+                Elders (65+)
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- COMMUNITIES SERVED -->
+
+    <div class="section">
+
+        <h2>
+            Communities Served
+        </h2>
+
+        <ul>
+
+            <li>
+                Individuals
+            </li>
+
+            <li>
+                Couples
+            </li>
+
+            <li>
+                Families
+            </li>
+
+            <li>
+                Telehealth Services
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- CONTACT -->
+
+    <div
+        class="section"
+        id="contact"
+    >
+
+        <h2>
+            Contact Us
+        </h2>
+
+        <p>
+
+            Email:
+
+            <a href="mailto:info@santanapllc.hush.com">
+                info@santanapllc.hush.com
+            </a>
+
+        </p>
+
+        <p>
+            Serving Individuals, Children, and Families Throughout
+            North Carolina.
+        </p>
+
+        <p>
+            English and Spanish Services Available.
+        </p>
+
+    </div>
+
 </div>
-    <div style="flex:1;min-width:300px;">
 
-      <div class="credentials">
-
-    <h3>Professional Credentials</h3>
-
-    <p>
-        <strong>Licensed Clinical Social Worker (LCSW)</strong><br>
-        Master of Social Work (MSW)<br>
-        Grand Valley State University, Michigan
-    </p>
-
-    <p>
-        <strong>Clinical Licensure:</strong> North Carolina<br>
-        <strong>Years of Clinical Practice:</strong> 14+ Years<br>
-        <strong>Languages:</strong> English and Spanish
-    </p>
-
-</div>
-
-
-    <p>
-        I am a clinical therapist with a Master's degree in Social Work and more than 14 years of experience providing mental health services. Throughout my career, I have had the opportunity to work with children, adolescents, adults, and families from diverse backgrounds and with a wide range of behavioral and emotional concerns.
-    </p>
-
-    <p>
-        I am passionate about helping individuals overcome behavioral and emotional challenges that may interfere with their ability to reach their goals and experience a more balanced and fulfilling life. I believe that therapy is a collaborative process and that each person brings unique experiences, strengths, and circumstances to the therapeutic relationship.
-    </p>
-        
-</div>
-
-</div>
- </div>
-
-<div class="section">
-
-    <h2>What You Can Expect From Services</h2>
-
-
-    <p>
-        Clients can expect a welcoming, respectful, and supportive environment where diversity and individual differences are valued and embraced.
-    </p>
-
-    <p>
-        Services are provided using a holistic, client-centered approach that considers each person's unique needs, strengths, background, environment, and potential barriers to treatment.
-    </p>
-
-    <p>
-        My goal is to work collaboratively with each client to identify meaningful goals, develop practical coping and problem-solving strategies, and support positive and sustainable changes.
-    </p>
-
-</div>
-
-<div class="section" id="about">
-
-    <h2>About Puente</h2>
-
-    <p>
-        Puente is a behavioral health agency that provides clinical counseling services in mental health and substance use to individuals, children, and families.
-    </p>
-
-    <p>
-        The agency serves clients from diverse backgrounds and across the lifespan. Our bilingual staff provide culturally responsive services to members of the Hispanic community in their preferred language.
-    </p>
-
-</div>
-
-<div class="section">
-
-    <h2>Our Mission</h2>
-
-    <p>
-        Our mission is to help bridge gaps in mental health care by providing accessible, compassionate, and individualized services through a systemic therapeutic approach.
-    </p>
-
-</div>
-
-<div class="section" id="services">
-
-    <h2>Services</h2>
-
-    <ul>
-        <li>Individual Therapy</li>
-        <li>Child and Adolescent Counseling</li>
-        <li>Family Therapy</li>
-        <li>Substance Use Counseling</li>
-        <li>Mental Health Counseling</li>
-        <li>Bilingual Services (English & Spanish)</li>
-    </ul>
-
-</div>
-
-<div class="section">
-
-    <h2>Specialties</h2>
-
-    <ul>
-        <li>Anger Management</li>
-        <li>Anxiety</li>
-        <li>Attachment Issues</li>
-        <li>Attention Deficit (ADHD)</li>
-        <li>Depression</li>
-        <li>Grief & Loss</li>
-        <li>Mood Disorders</li>
-        <li>Self Esteem</li>
-        <li>Stress Management</li>
-        <li>Substance Use</li>
-    </ul>
-
-</div>
-
-<div class="section">
-
-    <h2>Types of Therapy</h2>
-
-    <ul>
-        <li>Cognitive Behavioral Therapy (CBT)</li>
-        <li>Dialectical Behavioral Therapy (DBT)</li>
-        <li>Family Systems Therapy</li>
-        <li>Mindfulness</li>
-        <li>Mindfulness-Based Cognitive Therapy (MBCT)</li>
-        <li>Motivational Interviewing</li>
-        <li>Narrative Therapy</li>
-        <li>Person-Centered/Rogerian Therapy</li>
-        <li>Play Therapy</li>
-        <li>Trauma-Focused Cognitive Behavioral Therapy</li>
-    </ul>
-
-</div>
-
-<div class="section">
-
-    <h2>Age Specialties</h2>
-
-    <ul>
-        <li>Toddlers / Preschoolers (0-5)</li>
-        <li>Children (6-10)</li>
-        <li>Preteens / Tweens (11-13)</li>
-        <li>Adolescents / Teenagers (14-19)</li>
-        <li>Adults (20-64)</li>
-        <li>Elders (65+)</li>
-    </ul>
-
-</div>
-
-<div class="section">
-
-    <h2>Communities Served</h2>
-
-    <ul>
-        <li>Individuals</li>
-        <li>Couples</li>
-        <li>Families</li>
-        <li>Telehealth Services</li>
-    </ul>
-
-</div>
-
-<div class="section" id="contact">
-
-    <h2>Contact Us</h2>
-
-<p>
-    Email:
-    <a href="mailto:info@santanapllc.hush.com">
-        info@santanapllc.hush.com
-    </a>
-</p>
-
-    <p>Serving Individuals, Children, and Families Throughout North Carolina.</p>
-
-    <p>English and Spanish Services Available.</p>
-
-</div>
-
-</div>
+<!-- FOOTER -->
 
 <footer>
-    © 2026 Puente Therapy Counseling & Resources
+    © 2026 Puente Therapy Counseling &amp; Resources
 </footer>
 
-
-
 </body>
+
 </html>
