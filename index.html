@@ -1,557 +1,434 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Puente Therapy Counseling & Resources</title>
-    <!-- Google Fonts for professional typography -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --primary-teal: #0c5a69;
-            --accent-green: #6da339;
-            --text-dark: #333333;
-            --text-light: #666666;
-            --bg-light: #f8fafb;
-            --white: #ffffff;
-            --transition: all 0.3s ease;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Puente Therapy Counseling & Resources</title>
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XG2VDBCTD6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--text-dark);
-            line-height: 1.6;
-            background-color: var(--white);
-        }
+  gtag('config', 'G-XG2VDBCTD6');
+</script>
 
-        /* Top utility bar */
-        .top-bar {
-            background-color: var(--primary-teal);
-            color: var(--white);
-            font-size: 0.85rem;
-            text-align: center;
-            padding: 8px 20px;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-        }
+<style>
 
-        /* Header layout mirroring reference image */
-        header {
-            background-color: var(--white);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        .header-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-        }
-
-        /* Logo Brand Style Container */
-        .brand-logo {
-            text-align: center;
-            margin-bottom: 15px;
-            display: block;
-        }
-
-        /* Image styling for custom logo asset file */
-        .brand-logo img {
-            max-height: 110px;
-            width: auto;
-            max-width: 100%;
-            display: block;
-            margin: 0 auto;
-        }
-
-        /* Centered Horizontal Navigation Map */
-        nav {
-            width: 100%;
-            border-top: 1px solid #eee;
-            padding-top: 15px;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 35px;
-            flex-wrap: wrap;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: var(--text-light);
-            font-size: 0.85rem;
-            font-weight: 500;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            padding-bottom: 6px;
-            position: relative;
-            transition: var(--transition);
-        }
-
-        nav ul li a:hover,
-        nav ul li a.active {
-            color: var(--accent-green);
-        }
-
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background-color: var(--accent-green);
-            transition: var(--transition);
-            transform: translateX(-50%);
-        }
-
-        nav ul li a:hover::after {
-            width: 100%;
-        }
-
-        /* Pay Online Action Link styling matching reference */
-        .pay-online-btn {
-            position: absolute;
-            right: 20px;
-            top: 35px;
-            background-color: var(--accent-green);
-            color: var(--white) !important;
-            padding: 8px 16px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .pay-online-btn:hover {
-            background-color: var(--primary-teal);
-            opacity: 0.9;
-        }
-
-        /* Hero banner framework containing call-to-action layout card */
-        .hero-banner {
-            background: linear-gradient(rgba(255,255,255,0.15), rgba(255,255,255,0.15)), url('https://unsplash.com') no-repeat center center;
-            background-size: cover;
-            min-height: 480px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            padding: 40px 10%;
-            position: relative;
-        }
-
-        .cta-card {
-            background-color: rgba(8, 83, 99, 0.92);
-            color: var(--white);
-            padding: 45px;
-            max-width: 460px;
-            width: 100%;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-            border-radius: 2px;
-        }
-
-        .cta-card h2 {
-            font-family: 'Cinzel', serif;
-            font-size: 1.8rem;
-            font-weight: 500;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-
-        .cta-card .divider {
-            width: 60px;
-            height: 2px;
-            background-color: var(--accent-green);
-            margin: 0 auto 25px;
-        }
-
-        .cta-card p {
-            font-size: 0.95rem;
-            margin-bottom: 5px;
-            letter-spacing: 0.5px;
-            opacity: 0.9;
-        }
-
-        .cta-card .phone-number {
-            font-size: 1.6rem;
-            font-weight: 600;
-            margin-bottom: 25px;
-            display: block;
-            color: var(--white);
-            text-decoration: none;
-            letter-spacing: 1px;
-        }
-
-        .cta-btn {
-            display: inline-block;
-            border: 2px solid var(--white);
-            color: var(--white);
-            text-decoration: none;
-            padding: 12px 28px;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 600;
-            transition: var(--transition);
-            width: 100%;
-        }
-
-        .cta-btn:hover {
-            background-color: var(--white);
-            color: var(--primary-teal);
-        }
-
-        /* Core Section Layout Framework */
-        section {
-            padding: 80px 20px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .section-bg {
-            background-color: var(--bg-light);
-        }
-
-        .section-title {
-            text-align: center;
-            font-family: 'Cinzel', serif;
-            color: var(--primary-teal);
-            font-size: 2rem;
-            margin-bottom: 40px;
-            position: relative;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 3px;
-            background-color: var(--accent-green);
-            margin: 15px auto 0;
-        }
-
-        /* Grid formatting for practitioner background bio blocks */
-        .profile-grid {
-            display: grid;
-            grid-template-cols: 1fr 2fr;
-            gap: 40px;
-            align-items: start;
-        }
-
-        @media (max-width: 768px) {
-            .profile-grid {
-                grid-template-cols: 1fr;
-            }
-        }
-
-        .bio-card {
-            background: var(--bg-light);
-            padding: 30px;
-            border-left: 4px solid var(--primary-teal);
-        }
-
-        .bio-card h3 {
-            font-family: 'Cinzel', serif;
-            color: var(--primary-teal);
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-        }
-
-        .credential-item {
-            margin-bottom: 12px;
-            font-size: 0.95rem;
-        }
-
-        .credential-item strong {
-            color: var(--primary-teal);
-            display: block;
-        }
-
-        .bio-text p {
-            margin-bottom: 15px;
-            color: var(--text-light);
-            font-size: 1rem;
-        }
-
-        /* Grid setups for lists, tags, and categorical elements */
-        .grid-3 {
-            display: grid;
-            grid-template-cols: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        .feature-card {
-            background: var(--white);
-            padding: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
-            border-top: 3px solid var(--accent-green);
-            transition: var(--transition);
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-        }
-
-        .feature-card h3 {
-            color: var(--primary-teal);
-            margin-bottom: 12px;
-            font-size: 1.15rem;
-        }
-
-        .feature-card p {
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-
-        /* Pill and Badge layouts for clinical specialties and styles */
-        .badge-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            justify-content: center;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .badge {
-            background-color: var(--white);
-            border: 1px solid #e1e8ed;
-            color: var(--primary-teal);
-            padding: 10px 22px;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            transition: var(--transition);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
-        }
-
-        .badge:hover {
-            background-color: var(--primary-teal);
-            color: var(--white);
-            border-color: var(--primary-teal);
-        }
-
-
-.therapy-section .badge {
-border-left: 3px solid var(--accent-green);
-border-radius: 4px;
-}
-/* Bottom footer styling structure */
-footer {
-background-color: #11292e;
-color: rgba(255,255,255,0.7);
-padding: 60px 20px 20px;
-font-size: 0.9rem;
-}
-.footer-container {
-max-width: 1100px;
-margin: 0 auto;
-display: grid;
-grid-template-cols: repeat(auto-fit, minmax(250px, 1fr));
-gap: 40px;
-border-bottom: 1px solid rgba(255,255,255,0.1);
-padding-bottom: 40px;
-margin-bottom: 20px;
-}
-.footer-col h4 {
-color: var(--white);
-font-family: 'Cinzel', serif;
-margin-bottom: 20px;
-letter-spacing: 1px;
-font-size: 1.1rem;
-}
-.footer-col ul {
-list-style: none;
-}
-.footer-col ul li {
-margin-bottom: 10px;
-}
-.footer-col p {
-margin-bottom: 10px;
-}
-.footer-col a {
-color: rgba(255,255,255,0.7);
-text-decoration: none;
-transition: var(--transition);
-}
-.footer-col a:hover {
-color: var(--accent-green);
-}
-.footer-bottom {
-text-align: center;
-font-size: 0.8rem;
-color: rgba(255,255,255,0.4);
-}
-/* Responsive scaling handling rules */
-@media (max-width: 992px) {
-.pay-online-btn {
-position: static;
-margin-top: 15px;
-}
-.hero-banner {
-justify-content: center;
-padding: 40px 20px;
-}
+body{
+    font-family:"Segoe UI", Arial, Helvetica, sans-serif;
+    margin:0;
+    background:#f5f7f6;
+    color:#333;
+    line-height:1.8;
 }
 
+/* HEADER */
 
-English and Spanish Clinical Services Available | Servicios en Inglés y Español
-Pay Online
-About Us
-Our Services
-Specialties
-Types of Therapy
-Contact
+header{
+    background:linear-gradient(
+        135deg,
+        #2f6f73 0%,
+        #4d8c86 100%
+    );
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+    border-bottom-left-radius:40px;
+    border-bottom-right-radius:40px;
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+}
+
+  
+.logo{
+    width:280px;
+    max-width:90%;
+    display:block;
+    margin:0 auto 20px auto;
+}
+
+header p{
+    font-size:24px;
+    font-weight:300;
+    margin:0;
+}
+
+/* MAIN LAYOUT */
+
+.container{
+    width:92%;
+    max-width:1200px;
+    margin:auto;
+    padding:50px 0;
+}
+
+/* CONTENT CARDS */
+
+.section{
+    background:white;
+    margin-bottom:30px;
+    padding:40px;
+    border-radius:24px;
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.06);
+    transition:all .3s ease;
+}
+
+.section:hover{
+    transform:translateY(-3px);
+}
+
+/* HEADINGS */
+
+h2{
+    color:#b58ce7;
+    margin-top:0;
+    margin-bottom:20px;
+    padding-left:15px;
+    border-left:6px solid #5be58b;
+    font-size:30px;
+}
+
+h3{
+    color:#2f6f73;
+    margin-top:0;
+}
+
+/* PROFILE */
+
+.profile-photo{
+    text-align:center;
+}
+
+.profile-photo img{
+    width:320px;
+    max-width:100%;
+    border-radius:24px;
+    border:5px solid white;
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.18);
+}
+
+/* CREDENTIAL BOX */
+
+.credentials{
+    background:#eef8f4;
+    padding:25px;
+    border-radius:16px;
+}
+
+/* TEXT */
+
+p{
+    font-size:17px;
+}
+
+strong{
+    color:#2f6f73;
+}
+
+/* LISTS */
+
+ul{
+    list-style:none;
+    padding-left:0;
+}
+
+ul li{
+    padding:10px 0;
+    border-bottom:1px solid #ececec;
+}
+
+ul li:last-child{
+    border-bottom:none;
+}
+
+/* LINKS */
+
+a{
+    color:#2f6f73;
+    text-decoration:none;
+    font-weight:600;
+}
+
+a:hover{
+    color:#b58ce7;
+}
+
+/* FOOTER */
+
+footer{
+    background:linear-gradient(
+        135deg,
+        #2f6f73 0%,
+        #4d8c86 100%
+    );
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:30px;
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+    header{
+        padding:50px 20px;
+    }
+
+    .logo{
+        width:220px;
+    }
+
+    h2{
+        font-size:24px;
+    }
+
+    .section{
+        padding:25px;
+    }
+
+    .profile-photo img{
+        width:240px;
+    }
+}
+.navbar{
+    background:white;
+    text-align:center;
+    padding:15px;
+    border-bottom:1px solid #ddd;
+}
+
+.navbar a{
+    margin:0 25px;
+    color:#2f6f73;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.navbar a:hover{
+    color:#b58ce7;
+}
+</style>
+
+</head>
+
+<body id="top">
+
+<header>
+    <img src="Final01.jpg" alt="Puente Therapy Counseling & Resources Logo" class="logo">
+
+    <p>Building Bridges to Healing, Growth, and Wellness</p>
+  
+</header>
+<nav class="navbar">
+
+    <a href="#top">Home</a>
+
+    <a href="#about">About</a>
+
+    #servicesServices</a>
+
+    <aontactContact</a>
+
+</nav>
+
+
+<div class="container">
+
+<div class="section">
+
+    <h2>Evelyn A. Knez, LCSW</h2>
+<div style="display:flex;gap:40px;align-items:flex-start;flex-wrap:wrap;">
+
+<div class="profile-photo">
+    <img src="e357d0b1-775f-4f80-8ffa-5be2a12bea40.png" alt="Evelyn A. Knez, LCSW">
+</div>
+    <div style="flex:1;min-width:300px;">
+
+      <div class="credentials">
+
+    <h3>Professional Credentials</h3>
+
+    <p>
+        <strong>Licensed Clinical Social Worker (LCSW)</strong><br>
+        Master of Social Work (MSW)<br>
+        Grand Valley State University, Michigan
+    </p>
+
+    <p>
+        <strong>Clinical Licensure:</strong> North Carolina<br>
+        <strong>Years of Clinical Practice:</strong> 14+ Years<br>
+        <strong>Languages:</strong> English and Spanish
+    </p>
+
+</div>
+
+
+    <p>
+        I am a clinical therapist with a Master's degree in Social Work and more than 14 years of experience providing mental health services. Throughout my career, I have had the opportunity to work with children, adolescents, adults, and families from diverse backgrounds and with a wide range of behavioral and emotional concerns.
+    </p>
+
+    <p>
+        I am passionate about helping individuals overcome behavioral and emotional challenges that may interfere with their ability to reach their goals and experience a more balanced and fulfilling life. I believe that therapy is a collaborative process and that each person brings unique experiences, strengths, and circumstances to the therapeutic relationship.
+    </p>
+        
+</div>
+
+</div>
+ </div>
+
+<div class="section">
+
+    <h2>What You Can Expect From Services</h2>
+
+
+    <p>
+        Clients can expect a welcoming, respectful, and supportive environment where diversity and individual differences are valued and embraced.
+    </p>
+
+    <p>
+        Services are provided using a holistic, client-centered approach that considers each person's unique needs, strengths, background, environment, and potential barriers to treatment.
+    </p>
+
+    <p>
+        My goal is to work collaboratively with each client to identify meaningful goals, develop practical coping and problem-solving strategies, and support positive and sustainable changes.
+    </p>
+
+</div>
+
+<div class="section" id="about">
+
+    <h2>About Puente</h2>
+
+    <p>
+        Puente is a behavioral health agency that provides clinical counseling services in mental health and substance use to individuals, children, and families.
+    </p>
+
+    <p>
+        The agency serves clients from diverse backgrounds and across the lifespan. Our bilingual staff provide culturally responsive services to members of the Hispanic community in their preferred language.
+    </p>
+
+</div>
+
+<div class="section">
+
+    <h2>Our Mission</h2>
+
+    <p>
+        Our mission is to help bridge gaps in mental health care by providing accessible, compassionate, and individualized services through a systemic therapeutic approach.
+    </p>
+
+</div>
+
+<div class="section" id="services">
+
+    <h2>Services</h2>
+
+    <ul>
+        <li>Individual Therapy</li>
+        <li>Child and Adolescent Counseling</li>
+        <li>Family Therapy</li>
+        <li>Substance Use Counseling</li>
+        <li>Mental Health Counseling</li>
+        <li>Bilingual Services (English & Spanish)</li>
+    </ul>
+
+</div>
+
+<div class="section">
+
+    <h2>Specialties</h2>
+
+    <ul>
+        <li>Anger Management</li>
+        <li>Anxiety</li>
+        <li>Attachment Issues</li>
+        <li>Attention Deficit (ADHD)</li>
+        <li>Depression</li>
+        <li>Grief & Loss</li>
+        <li>Mood Disorders</li>
+        <li>Self Esteem</li>
+        <li>Stress Management</li>
+        <li>Substance Use</li>
+    </ul>
+
+</div>
+
+<div class="section">
+
+    <h2>Types of Therapy</h2>
+
+    <ul>
+        <li>Cognitive Behavioral Therapy (CBT)</li>
+        <li>Dialectical Behavioral Therapy (DBT)</li>
+        <li>Family Systems Therapy</li>
+        <li>Mindfulness</li>
+        <li>Mindfulness-Based Cognitive Therapy (MBCT)</li>
+        <li>Motivational Interviewing</li>
+        <li>Narrative Therapy</li>
+        <li>Person-Centered/Rogerian Therapy</li>
+        <li>Play Therapy</li>
+        <li>Trauma-Focused Cognitive Behavioral Therapy</li>
+    </ul>
+
+</div>
+
+<div class="section">
+
+    <h2>Age Specialties</h2>
+
+    <ul>
+        <li>Toddlers / Preschoolers (0-5)</li>
+        <li>Children (6-10)</li>
+        <li>Preteens / Tweens (11-13)</li>
+        <li>Adolescents / Teenagers (14-19)</li>
+        <li>Adults (20-64)</li>
+        <li>Elders (65+)</li>
+    </ul>
+
+</div>
+
+<div class="section">
+
+    <h2>Communities Served</h2>
+
+    <ul>
+        <li>Individuals</li>
+        <li>Couples</li>
+        <li>Families</li>
+        <li>Telehealth Services</li>
+    </ul>
+
+</div>
+
+<div class="section" id="contact">
+
+    <h2>Contact Us</h2>
+
+<p>
+    Email:
+    <a href="mailto:info@santanapllc.hush.com">
+        info@santanapllc.hush.com
+    </a>
+</p>
+
+    <p>Serving Individuals, Children, and Families Throughout North Carolina.</p>
+
+    <p>English and Spanish Services Available.</p>
+
+</div>
+
+</div>
+
+<footer>
+    © 2026 Puente Therapy Counseling & Resources
+</footer>
 
 
 
-Start Your Recovery Today!
-
-Connect Directly via Email:
-smknez@gmail.com
-Request Appointment
-
-Evelyn A. Knez, LCSW
-
-
-Credentials
-
-Licensed Clinical Social Worker
-Clinical Licensure: North Carolina
-
-
-Master of Social Work (MSW)
-Grand Valley State University, Michigan
-
-
-Experience & Languages
-14+ Years Practice | Bilingual (English/Spanish)
-
-
-
-I am a clinical therapist with a Master's degree in Social Work and more than 14 years of experience providing mental health services. Throughout my career, I have had the opportunity to work with children, adolescents, adults, and families from diverse backgrounds and with a wide range of behavioral and emotional concerns.
-I am passionate about helping individuals overcome behavioral and emotional challenges that may interfere with their ability to reach their goals and experience a more balanced and fulfilling life. I believe that therapy is a collaborative process and that each person brings unique experiences, strengths, and circumstances to the therapeutic relationship.
-
-
-What To Expect From Services
-
-
-Welcoming Environment
-Clients can expect a welcoming, respectful, and supportive space where diversity and individual differences are valued and embraced completely.
-
-
-Holistic Framework
-Services are provided using a client-centered approach considering each person's unique background, environment, and personal strengths.
-
-
-Sustainable Progress
-My goal is to identify meaningful steps, develop functional problem-solving choices, and back sustainable changes over time.
-
-
-Clinical Care Services
-
-Individual Therapy
-Child and Adolescent Counseling
-Family Therapy
-Substance Use Counseling
-Mental Health Counseling
-Bilingual Services (English & Spanish)
-
-Clinical Specialties
-
-Anger Management
-Anxiety
-Attachment Issues
-Attention Deficit (ADHD)
-Depression
-Grief & Loss
-Mood Disorders
-Self Esteem
-Stress Management
-Substance Use
-
-Types of Therapy Offered
-
-Cognitive Behavioral Therapy (CBT)
-Dialectical Behavioral Therapy (DBT)
-Family Systems Therapy
-Mindfulness
-Mindfulness-Based Cognitive Therapy (MBCT)
-Motivational Interviewing
-Narrative Therapy
-Person-Centered/Rogerian Therapy
-Play Therapy
-Trauma-Focused Cognitive Behavioral Therapy
-
-Age Specialties & Groups
-
-Toddlers / Preschoolers (0-5)
-Children (6-10)
-Preteens / Tweens (11-13)
-Adolescents / Teenagers (14-19)
-Adults (20-64)
-Elders (65+)
-
-Puente Therapy
-Building Bridges to Healing, Growth, and Wellness.
-A behavioral health agency providing customized mental health and substance use consulting services.
-
-
-Quick Navigation
-
-About Us
-Our Services
-Specialties
-Therapy Options
-
-
-
-Contact Info
-Email: smknez@gmail.com
-Coverage: Serving Individuals, Children, and Families Throughout North Carolina via Telehealth.
-
-
-
-© 2026 Puente Therapy Counseling & Resources. All Rights Reserved.
-
-document.querySelectorAll('nav a').forEach(anchor => {
-anchor.addEventListener('click', function(e) {
-e.preventDefault();
-const targetId = this.getAttribute('href');
-if(targetId === '#') return;
-document.querySelector(targetId).scrollIntoView({
-behavior: 'smooth'
-});
-document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
-this.classList.add('active');
-});
-});
-
+</body>
+</html>
